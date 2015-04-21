@@ -1,0 +1,38 @@
+{
+  "name": "jam3-lesson-photoshop",
+  "version": "1.0.0",
+  "description": "intro to photoshop for developers",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Nick Poison",
+    "email": "nick@jam3.com",
+    "url": "https://github.com/njam3"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "developer",
+    "photoshop",
+    "images",
+    "assets",
+    "intro",
+    "lesson"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/jam3-lesson-photoshop.git"
+  },
+  "homepage": "https://github.com/Jam3/jam3-lesson-photoshop",
+  "bugs": {
+    "url": "https://github.com/Jam3/jam3-lesson-photoshop/issues"
+  }
+}
