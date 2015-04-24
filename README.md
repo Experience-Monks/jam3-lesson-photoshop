@@ -1,3 +1,7 @@
+##### [jam3-lesson](https://github.com/Jam3/jam3-lesson) » photoshop
+
+---
+
 # Photoshop for developers
 
 This is a brief intro on how to use photoshop as a developer, with a little sprinkling of illustrator
