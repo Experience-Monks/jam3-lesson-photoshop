@@ -56,9 +56,9 @@ The easiest way to measure an object is to select any of the Marquee tools and s
 It is often useful to isolate a layer to help measure things or export the image properly. To isolate a layer follow these steps:
 
 - Select the Move Tool
-- Hold alt and right-click on object in the image you want (this will select the correct layer)
-- In the layers panel, hold alt and left-click on the eye (layer visibility)
-    - You can alt and left-click the eye again to return the document to the previous state
+- Hold alt/cmd and right-click on object in the image you want (this will select the correct layer)
+- In the layers panel, hold alt/cmd and left-click on the eye (layer visibility)
+    - You can alt/cmd and left-click the eye again to return the document to the previous state
 
 To crop the document to a layer's width / height:
 
