@@ -135,11 +135,28 @@ When creating images with repeating patterns, create an actual [repeating patter
 
 This can be the difference between a 12MB file and a 5kb file.
 
-#### Delete all shapes that aren't visible
+#### Delete shapes that aren't visible
 
 When using a mask, it's tempting to not bother to remove the shapes that are hidden behind by the mask. But if you export the SVG, each of those hidden shapes still take up space.
 
 Please trim your shapes so that shapes outside the mask are not included in exporting
+
+#### Avoid unnecessary grouping
+Grouping shapes in a bunch nested folders results in output like this:
+
+```
+<g>
+    <g>
+        <g>
+            <g>
+                <path id="actual shape"/>
+            </g>
+        </g>
+    </g>
+</g>
+```
+This adds up and Vadim has run turned a 3Mb SVG into a 6Kb SVG just by removing unnecessary groupings
+
 
 ### Expand your strokes.
 When an svg is scaled, stroke widths remain the same.  
@@ -165,3 +182,10 @@ Developers will likely only try and "okay" it in Chrome. Safari and IE deal with
 ### Check your exported SVG's filesize
 SVGs should usually be under 30kb. If your SVG ends up being larger than 200kb, something probably went wrong.
 Grab a developer and have him/her take a look.
+
+### Export using "Presentation Attributes"
+
+IE doesn't like styles within SVGs, so export using Presentation Attributes
+
+![image](https://cloud.githubusercontent.com/assets/743976/12837756/8c2cb8ac-cb93-11e5-942d-5595823ca325.png)
+
