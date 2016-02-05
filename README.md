@@ -123,3 +123,45 @@ Select: Output Fewer <tspan> Elements
 Select: Use <textPath> Element For Text On Path
 
 ![img](http://i.imgur.com/v5PnlVK.jpg)
+
+---
+
+# Designing efficient SVGs for smooth animation
+
+### Minimize the number of individual shapes in each file (use patterns when possible)
+![image](https://cloud.githubusercontent.com/assets/743976/12837163/cce20dee-cb8d-11e5-9ae3-d5866f0fe99d.png)
+
+When creating images with repeating patterns, create an actual [repeating pattern](https://helpx.adobe.com/illustrator/how-to/create-apply-patterns.html) in Illustrator, and set that pattern as a shape's fill. Do not copy and paste hundreds of individual dotted shapes.
+
+This can be the difference between a 12MB file and a 5kb file.
+
+#### Delete all shapes that aren't visible
+
+When using a mask, it's tempting to not bother to remove the shapes that are hidden behind by the mask. But if you export the SVG, each of those hidden shapes still take up space.
+
+Please trim your shapes so that shapes outside the mask are not included in exporting
+
+### Expand your strokes.
+When an svg is scaled, stroke widths remain the same.  
+If you want a line's thickness to scale along with the image, you need to select the line and expand it into a shape
+
+### Do not use raster/photoshop filters
+
+Only use "Illustrator filters". 
+
+![image](https://cloud.githubusercontent.com/assets/743976/12837325/925a2d44-cb8f-11e5-9e59-58bdeae24066.png)
+
+You can download more illustrator filters from the internet.
+Using raster/photoshop filters will result in the exported image no longer being a vector file but instead a vector bitmap (can't scale, can't animate, can't change colors)
+
+### Avoid filters  
+
+SVG filters result in laggy animations, especially opacity and noise and grains. Adding noise as a filter will make the svg ridiculously slow to animate on anything except Chrome.  
+
+### Test on Safari and IE to see if SVGs are performant
+
+Developers will likely only try and "okay" it in Chrome. Safari and IE deal with SVG animations significantly more poorly than Chrome does
+
+### Check your exported SVG's filesize
+SVGs should usually be under 30kb. If your SVG ends up being larger than 200kb, something probably went wrong.
+Grab a developer and have him/her take a look.
