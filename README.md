@@ -155,8 +155,7 @@ Grouping shapes in a bunch nested folders results in output like this:
     </g>
 </g>
 ```
-This adds up and Vadim has run turned a 3Mb SVG into a 6Kb SVG just by removing unnecessary groupings
-
+This unnecessarily adds to the weight of the file, in practice, a 3Mb SVG was shrunk to 6Kb by removing unnecessary groups.
 
 ### Expand your strokes.
 When an svg is scaled, stroke widths remain the same.  
